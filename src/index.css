@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=Montserrat:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-bg: #FAD2E1;
+  --color-primary: #770523;
+  --color-accent-green: #D0D996;
+  --color-accent-orange: #DD4E28;
+  --color-white: #FFFFFF;
+  --color-text-dark: #2D1B1B;
+}
+
+* {
+  @apply transition-colors duration-300;
+}
+
+html, body {
+  @apply bg-studio-bg text-studio-text-dark;
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+}
+
+.glass {
+  @apply bg-white bg-opacity-85 backdrop-blur-20 border border-gray-200;
+}
+
+.card {
+  @apply glass rounded-2xl p-6 shadow-studio hover:shadow-studio-lg;
+}
+
+.btn-primary {
+  @apply px-6 py-3 rounded-2xl font-semibold text-white bg-gradient-to-r from-studio-primary to-studio-accent-orange hover:shadow-studio-lg transform;
+}
+
+.btn-secondary {
+  @apply px-6 py-3 rounded-2xl font-semibold border-2 border-studio-primary text-studio-primary hover:bg-studio-primary hover:text-white;
+}
+
+.btn-danger {
+  @apply px-4 py-2 rounded-2xl font-semibold bg-red-500 text-white hover:bg-red-600;
+}
+
+.input-studio {
+  @apply w-full px-4 py-3 rounded-2xl bg-white bg-opacity-80 border-2 border-studio-primary border-opacity-30 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-studio-primary focus:ring-opacity-50;
+}
+
+.table-studio tbody tr:nth-child(odd) {
+  @apply bg-studio-bg bg-opacity-30;
+}
+
+.table-studio tbody tr:hover {
+  @apply bg-studio-bg bg-opacity-50;
+}
+
+.badge-success {
+  @apply inline-block px-3 py-1 rounded-full bg-green-100 text-green-800 text-sm font-semibold;
+}
+
+.badge-warning {
+  @apply inline-block px-3 py-1 rounded-full bg-yellow-100 text-yellow-800 text-sm font-semibold;
+}
+
+.badge-error {
+  @apply inline-block px-3 py-1 rounded-full bg-red-100 text-red-800 text-sm font-semibold;
+}
+
+.badge-info {
+  @apply inline-block px-3 py-1 rounded-full bg-blue-100 text-blue-800 text-sm font-semibold;
+}
+
+.modal-overlay {
+  @apply fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 backdrop-blur-sm;
+}
+
+.modal {
+  @apply card max-w-2xl w-full mx-4 max-h-[90vh] overflow-y-auto;
+}
+
+@keyframes fadeIn {
+  from {
+    @apply opacity-0 transform scale-95;
+  }
+  to {
+    @apply opacity-100 transform scale-100;
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out;
+}
