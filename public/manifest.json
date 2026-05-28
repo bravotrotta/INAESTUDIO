@@ -1,0 +1,10 @@
+{
+  "name": "INAESTUDIO - Gestión Financiera",
+  "short_name": "INAESTUDIO",
+  "description": "Sistema de gestión financiera para estudio de estética",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "theme_color": "#770523",
+  "background_color": "#FAD2E1"
+}
